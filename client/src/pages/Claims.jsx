@@ -120,7 +120,8 @@ export default function Claims() {
     if (startDate) params.set('startDate', startDate);
     if (endDate)   params.set('endDate',   endDate);
     const token = localStorage.getItem('tl_token');
-    window.open(`http://localhost:5000/api/export/claims?${params}&token=${token}`, '_blank');
+    const base = import.meta.env.VITE_API_EXPORT_BASE || '';
+    window.open(`${base}/api/export/claims?${params}&token=${token}`, '_blank');
   }
 
   const from = (page - 1) * pagination.limit + 1;

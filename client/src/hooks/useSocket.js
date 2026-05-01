@@ -10,7 +10,8 @@ export default function useSocket() {
 
   useEffect(() => {
     if (!socketInstance) {
-      socketInstance = io('http://localhost:5000', {
+      const wsUrl = import.meta.env.VITE_WS_URL || window.location.origin;
+      socketInstance = io(wsUrl, {
         transports: ['websocket', 'polling'],
         reconnectionAttempts: 5,
         reconnectionDelay: 2000,

@@ -7,7 +7,7 @@ import api from '../api/axios';
 import useAuthStore from '../store/authStore';
 
 const FLOAT_STATS = [
-  { label: '2000 Cr+', sub: 'Fraud Prevented', delay: 0 },
+  { label: '₹2,400Cr+', sub: 'Fraud Prevented', delay: 0 },
   { label: '97%', sub: 'Accuracy', delay: 0.8 },
   { label: '400ms', sub: 'Decision Time', delay: 1.6 },
   { label: '5 AI', sub: 'Layers', delay: 2.4 },
@@ -184,7 +184,7 @@ export default function Login() {
             textTransform: 'uppercase',
             marginBottom: 10,
           }}>
-            Demo Credentials — Click to Fill
+            Quick Access — Click to autofill
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
             {[
